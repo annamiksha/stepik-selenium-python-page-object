@@ -32,3 +32,4 @@ class ProductPage(BasePage):
             "Success message is presented, but should not be"
 
 
+

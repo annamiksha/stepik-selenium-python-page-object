@@ -23,4 +23,12 @@ class ProductPage(BasePage):
         assert product_name_in_message == product_name, f'Wrong product name "{product_name_in_message}" ' \
                                                         f'is shown is message. Expcted name was "{product_name}"'
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.MESSAGE_PRODUCT_NAME), \
+            "Success message is presented, but should not be"
+
+    def should_be_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.MESSAGE_PRODUCT_NAME), \
+            "Success message is presented, but should not be"
+
 
